@@ -1,6 +1,8 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient } from '@/utils/supabase/server';
 
-export const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_ANON_KEY
-)
+export default async function Notes() {
+  const supabase = await createClient();
+  const { data: notes } = await supabase.from("notes").select();
+
+  return <pre>{JSON.stringify(notes, null, 2)}</pre>
+}
