@@ -1,9 +1,12 @@
+
 import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import Logo from "../assets/Logo_TEH.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
+
+;
 
 export function Navbar() {
 

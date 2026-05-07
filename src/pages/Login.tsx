@@ -1,4 +1,5 @@
 import { useState } from 'react'
+// @ts-ignore: side-effect import of CSS module without declarations
 import 'bootswatch/dist/darkly/bootstrap.min.css'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
